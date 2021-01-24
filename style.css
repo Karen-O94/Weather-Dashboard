@@ -1,0 +1,34 @@
+.search-row{
+    height: 10px;
+}
+
+.day{
+    color: var(--white);
+    margin-right: 2%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.day-card {
+    padding: 0.5rem;
+}
+
+.low {
+    background-color: green;
+    font-size: 20px;
+}
+
+.moderate {
+    background-color: orange;
+    font-size: 20px;
+}
+
+.severe {
+    background-color: red;
+    font-size: 20px;
+}
