@@ -7,7 +7,7 @@ $(document).ready(function () {
         retrieveCityArray();
     });
 
-    var city = "london";
+    var city = "";
     var cityNames = [];
 
     //This function saves the city names and stores it in the user's locatStorage
@@ -26,11 +26,29 @@ $(document).ready(function () {
 
         if (retrievedCityArray !== null) {
             cityNames = JSON.parse(retrievedCityArray);
-            //renderCityButtons();
+            addCityButtons();
             cityLongLat();
         }
     };
 
+    //Function to add city buttons to side navbar
+    function addCityButtons() {
+        $("#add-city-div").empty();
+        for (var i = 0; i < cityNames.length; i++) {
+            var newCityBtn = $("<button>");
+            newCityBtn.addClass("btn btn-outline-secondary city-btn");
+            newCityBtn.attr("city-name", cityNames[i]);
+            newCityBtn.text(cityNames[i]);
+
+            $("#add-city-div").prepend(newCityBtn)
+        }
+    }
+
+    function clickedCityInfo () {
+       city = $(this).attr("city-name");
+       localStorage.setItem("searchedCity", JSON.stringify(city));
+       cityLongLat();
+    }
     //variables showing APIKey used through out
     var apiKey = "c38077db5d2d3cc7511c35c5146ebdb4";
     var longitude = "";
@@ -74,7 +92,6 @@ $(document).ready(function () {
                 renderFullPage(response);
             });
     };
-    getWeatherInfo();
 
     //Displays full page
     function renderFullPage(response) {
