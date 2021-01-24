@@ -1,5 +1,14 @@
 $(document).ready(function () {
 
+    //Global Variables
+    var city = "";
+    var cityNames = [];
+    var apiKey = "c38077db5d2d3cc7511c35c5146ebdb4";
+    var longitude = "";
+    var latitude = "";
+
+    retrieveCityArray();
+
     //add click event to search button to trigger all the functions
     $(".searchBtn").on("click", function (event) {
         event.preventDefault(); //Prevents default function of button
@@ -7,8 +16,9 @@ $(document).ready(function () {
         retrieveCityArray();
     });
 
-    var city = "";
-    var cityNames = [];
+    // When user clicks city button
+    $(document).on("click", ".city-btn", clickedCityInfo);
+
 
     //This function saves the city names and stores it in the user's locatStorage
     function saveSearchedCity() {
@@ -44,15 +54,12 @@ $(document).ready(function () {
         }
     }
 
-    function clickedCityInfo () {
-       city = $(this).attr("city-name");
-       localStorage.setItem("searchedCity", JSON.stringify(city));
-       cityLongLat();
+    //This function finds city info from localStorage
+    function clickedCityInfo() {
+        city = $(this).attr("city-name");
+        localStorage.setItem("searchedCity", JSON.stringify(city));
+        cityLongLat();
     }
-    //variables showing APIKey used through out
-    var apiKey = "c38077db5d2d3cc7511c35c5146ebdb4";
-    var longitude = "";
-    var latitude = "";
 
     //1st API required to retrieve City Name using Longitude & Latitude info
     function cityLongLat() {
@@ -71,8 +78,7 @@ $(document).ready(function () {
             latitude = response.coord.lat;
             getWeatherInfo();
         });
-    }
-    cityLongLat();
+    };
 
     //2nd API call required to retrieve the weather info
     function getWeatherInfo() {
@@ -99,7 +105,7 @@ $(document).ready(function () {
         renderCityInfo(response);
         uvIndexIndicator(response);
         display5DayForecast(response);
-        //$("#5day-forecast").css("display", "block");
+        //$("#five-day-forecast").css("display", "block");
     };
     //This function retrieves specific weather info
     function renderCityInfo(response) {
@@ -128,14 +134,14 @@ $(document).ready(function () {
     //Next function retrieves determines if UV Index is moderate, high or low
     function uvIndexIndicator(uvIndex) {
         if (uvIndex <= 2) {
-            $(".present-uvi").addClass("low")
+            $(".present-uvi").addClass("low");
             $(".present-uvi").removeClass("moderate severe");
         } else if (uvIndex > 2 && uvIndex <= 5) {
             $(".present-uvi").addClass("moderate");
-            $(".present-uvi").removeClass("low severe")
+            $(".present-uvi").removeClass("low severe");
         } else if (uvIndex >= 6) {
             $(".present-uvi").addClass("severe");
-            $(".present-uvi").removeClass("low moderate")
+            $(".present-uvi").removeClass("low moderate");
         }
 
     };
@@ -160,7 +166,7 @@ $(document).ready(function () {
     function display5DayForecast(response) {
         for (var i = 1; i <= 5; i++) {
             displayDailyDate(response, i);
-            displayDailyForecastIcon(response, i)
+            displayDailyForecastIcon(response, i);
             dailyForecast(response, i);
         }
     };
@@ -179,7 +185,7 @@ $(document).ready(function () {
         var humidity = response.daily[i].humidity;
         var tempID = "#daily-temp-" + i;
         var humidityID = "#daily-humidity-" + i;
-        $(tempID).text("Temperature: " + temp + "°C");
+        $(tempID).text("Temp: " + temp + "°C");
         $(humidityID).text("Humidity: " + humidity + "%");
     }
 

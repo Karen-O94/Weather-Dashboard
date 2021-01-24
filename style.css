@@ -1,5 +1,9 @@
-.search-row{
-    height: 10px;
+#five-day-forecast{
+    display: block;
+}
+
+#add-city-div{
+    width: 80%;
 }
 
 .day{
@@ -7,6 +11,7 @@
     margin-right: 2%;
     padding-left: 0;
     padding-right: 0;
+    border-radius: 0.5rem;
 }
 
 img {
