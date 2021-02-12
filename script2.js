@@ -28,7 +28,7 @@ $(document).ready(function () {
         cityNames.push(city);
         localStorage.setItem("cities", JSON.stringify(cityNames));
     };
-
+    
     //retrieves items from localStorage
     function retrieveCityArray() {
         var retrievedCityArray = localStorage.getItem("cities");
@@ -113,10 +113,11 @@ $(document).ready(function () {
         var humidity = response.current.humidity;
         var windSpeed = mPerSectoMPH(response.current.wind_speed);
         var uvIndex = response.current.uvi;
+        //var uvPTag = $(".present-uvi");
         $(".present-temp").text("Temperature: " + temp + "°C");
         $(".present-humidity").text("Humidity: " + humidity + "%");
         $(".present-wind").text("Wind Speed: " + windSpeed + "MPH");
-        $(".present-uvi").text("UV Index: " + uvIndex);
+        $("#uvi-value").text(uvIndex);
         uvIndexIndicator(uvIndex);
     };
     //renderCityInfo();
@@ -134,14 +135,14 @@ $(document).ready(function () {
     //Next function retrieves determines if UV Index is moderate, high or low
     function uvIndexIndicator(uvIndex) {
         if (uvIndex <= 2) {
-            $(".present-uvi").addClass("low");
-            $(".present-uvi").removeClass("moderate severe");
+            $("#uvi-value").addClass("low");
+            $("#uvi-value").removeClass("moderate severe");
         } else if (uvIndex > 2 && uvIndex <= 5) {
-            $(".present-uvi").addClass("moderate");
-            $(".present-uvi").removeClass("low severe");
+            $("#uvi-value").addClass("moderate");
+            $("#uvi-value").removeClass("low severe");
         } else if (uvIndex >= 6) {
-            $(".present-uvi").addClass("severe");
-            $(".present-uvi").removeClass("low moderate");
+            $("#uvi-value").addClass("severe");
+            $("#uvi-value").removeClass("low moderate");
         }
 
     };
