@@ -31,6 +31,7 @@ As the client wanted the UV Index to be colour-coded to represent whether the UV
 ## Deployed Application Images
 ![image](https://user-images.githubusercontent.com/74797740/107834865-6f4cff00-6d8f-11eb-85e7-fb91737638cf.png)
 
+![image](https://user-images.githubusercontent.com/74797740/107834963-cd79e200-6d8f-11eb-9def-70e75340a91d.png)
 
 ![image](https://user-images.githubusercontent.com/74797740/105646095-d0bb3580-5e95-11eb-8d4e-ba5fad1cfff8.png)
 
