@@ -33,7 +33,7 @@ As the client wanted the UV Index to be colour-coded to represent whether the UV
 
 ![image](https://user-images.githubusercontent.com/74797740/107834963-cd79e200-6d8f-11eb-9def-70e75340a91d.png)
 
-![image](https://user-images.githubusercontent.com/74797740/105646095-d0bb3580-5e95-11eb-8d4e-ba5fad1cfff8.png)
+![image](https://user-images.githubusercontent.com/74797740/107835064-20ec3000-6d90-11eb-9ad7-6efab382eef3.png)
 
 ## Difficulties
 API: I run into some difficults extracting information from the API objects and it took a lot of trial and error and debugging to work out where I was going wrong. It was difficult figuring out how to organise my API calls and when to call them to make sure they rendered on the page at the right time. 
