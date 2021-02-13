@@ -35,6 +35,8 @@ As the client wanted the UV Index to be colour-coded to represent whether the UV
 
 ![image](https://user-images.githubusercontent.com/74797740/107835064-20ec3000-6d90-11eb-9ad7-6efab382eef3.png)
 
+![image](https://user-images.githubusercontent.com/74797740/107835364-3150da80-6d91-11eb-889d-87379ac2584f.png)
+
 ## Difficulties
 API: I run into some difficults extracting information from the API objects and it took a lot of trial and error and debugging to work out where I was going wrong. It was difficult figuring out how to organise my API calls and when to call them to make sure they rendered on the page at the right time. 
 
@@ -48,3 +50,6 @@ I used console.log, Chrome DevTools, YouTube and peer reviews to troubleshoot wh
 - CSS
 - JavaScript / [jQuery](https://jquery.com/) / AJAX
 - [VScode](https://code.visualstudio.com/)
+
+# License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
