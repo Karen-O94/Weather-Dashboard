@@ -29,7 +29,8 @@ The last few steps was making sure the information collated was displaying in th
 As the client wanted the UV Index to be colour-coded to represent whether the UV Index was in the favourable, moderate or severe; I wrote a function to display this comparison using a `for loop` setting the conditions with if/else statements. 
 
 ## Deployed Application Images
-![image](https://user-images.githubusercontent.com/74797740/105646075-ab2e2c00-5e95-11eb-8b8e-bbc13f3e20ee.png)
+![image](https://user-images.githubusercontent.com/74797740/107834865-6f4cff00-6d8f-11eb-85e7-fb91737638cf.png)
+
 
 ![image](https://user-images.githubusercontent.com/74797740/105646095-d0bb3580-5e95-11eb-8d4e-ba5fad1cfff8.png)
 
