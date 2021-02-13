@@ -101,6 +101,7 @@ $(document).ready(function () {
 
     //Displays full page
     function renderFullPage(response) {
+        $("#mainPage").css("display","block");
         currentCityTitle(response);
         renderCityInfo(response);
         uvIndexIndicator(response);
@@ -113,7 +114,6 @@ $(document).ready(function () {
         var humidity = response.current.humidity;
         var windSpeed = mPerSectoMPH(response.current.wind_speed);
         var uvIndex = response.current.uvi;
-        //var uvPTag = $(".present-uvi");
         $(".present-temp").text("Temperature: " + temp + "°C");
         $(".present-humidity").text("Humidity: " + humidity + "%");
         $(".present-wind").text("Wind Speed: " + windSpeed + "MPH");

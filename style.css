@@ -2,6 +2,9 @@
     display: block;
 }
 
+#mainPage{
+    display: none;
+}
 #add-city-div{
     width: 80%;
 }
