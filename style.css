@@ -10,7 +10,7 @@
 }
 
 .day{
-    color: var(--white);
+    color: var(-white);
     margin-right: 2%;
     padding-left: 0;
     padding-right: 0;
