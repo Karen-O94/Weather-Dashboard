@@ -120,7 +120,6 @@ $(document).ready(function () {
         $("#uvi-value").text(uvIndex);
         uvIndexIndicator(uvIndex);
     };
-    //renderCityInfo();
 
     //changes temp from Kelvin to Celsius
     function fromKelvinToCelsius(kelvin) {
@@ -129,7 +128,7 @@ $(document).ready(function () {
 
     //changes speed to mph
     function mPerSectoMPH(speed) {
-        return (speed * 2.23694).toFixed(1);
+        return (speed * 2.23694).toFixed();
     };
 
     //Next function retrieves determines if UV Index is moderate, high or low
