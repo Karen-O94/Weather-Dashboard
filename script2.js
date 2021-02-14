@@ -105,8 +105,7 @@ $(document).ready(function () {
         currentCityTitle(response);
         renderCityInfo(response);
         uvIndexIndicator(response);
-        display5DayForecast(response);
-        //$("#five-day-forecast").css("display", "block");
+        display5DayForecast(response)
     };
     //This function retrieves specific weather info
     function renderCityInfo(response) {
