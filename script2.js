@@ -128,7 +128,7 @@ $(document).ready(function () {
 
     //changes speed to mph
     function mPerSectoMPH(speed) {
-        return (speed * 2.23694).toFixed();
+        return (speed * 2.23694).toFixed(1);
     };
 
     //Next function retrieves determines if UV Index is moderate, high or low
